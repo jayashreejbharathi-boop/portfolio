@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayashree M B — Computer Science Engineer & AI Developer</title>
+  
+  <!-- Meta tags -->
+  <meta name="title" content="Jayashree M B — Computer Science Engineer & AI Developer" />
+  <meta name="description" content="Portfolio of Jayashree M B. Computer Science Engineering student at The Oxford College of Engineering. Skilled in Java, C++, Python, OpenCV, AWS SageMaker, and DSA." />
+  <meta name="keywords" content="Jayashree M B, Computer Science, AI, Machine Learning, OpenCV, AWS SageMaker, C++, DSA, Python, Oxford College of Engineering" />
+  <meta name="author" content="Jayashree M B" />
+
+  <!-- Google Fonts: Poppins (Headings), Inter (Body), JetBrains Mono (Code/Badges) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            cyberNavy: '#080d1a',
+            cyberCard: 'rgba(15, 23, 42, 0.75)',
+            neonCyan: '#00f0ff',
+            neonTeal: '#10b981',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-[#080d1a] text-slate-100 cyber-grid selection:bg-[#00f0ff] selection:text-[#080d1a]">
+
+  <!-- Ambient Cyber Lighting Background -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-[#00f0ff]/10 rounded-full blur-[140px] animate-pulse-cyan"></div>
+    <div class="absolute top-1/3 -right-32 w-[32rem] h-[32rem] bg-[#10b981]/10 rounded-full blur-[140px] animate-pulse-cyan" style="animation-delay: 2.5s;"></div>
+    <div class="absolute -bottom-32 left-1/3 w-[32rem] h-[32rem] bg-indigo-500/10 rounded-full blur-[140px] animate-pulse-cyan" style="animation-delay: 4.5s;"></div>
+  </div>
+
+  <!-- Toast Notification for Clipboard Copy & Downloads -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-[#0d1527] text-white px-5 py-3.5 rounded-xl shadow-2xl border border-[#00f0ff]/30 backdrop-blur-md">
+    <i data-lucide="check-circle" class="w-5 h-5 text-[#00f0ff]"></i>
+    <span id="toast-message" class="text-sm font-medium font-sans">Copied to clipboard!</span>
+  </div>
+
+  <!-- ==========================================
+       1. NAVIGATION BAR
+       ========================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-[#080d1a]/85 border-b border-white/[0.08] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-3.5">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00f0ff] via-[#38bdf8] to-[#10b981] p-[2px] shadow-lg shadow-[#00f0ff]/20 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+          <img src="profile.jpg" alt="Jayashree M B" class="w-full h-full object-cover object-top rounded-[9px]" />
+        </div>
+        <span class="font-heading font-bold text-base sm:text-lg tracking-tight text-gradient">Jayashree M B</span>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-[#00f0ff] transition-colors">About</a>
+        <a href="#skills" class="hover:text-[#00f0ff] transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-[#00f0ff] transition-colors">Internships</a>
+        <a href="#projects" class="hover:text-[#00f0ff] transition-colors">Projects</a>
+        <a href="#education" class="hover:text-[#00f0ff] transition-colors">Education</a>
+        <a href="#resume" class="hover:text-[#00f0ff] transition-colors font-semibold text-[#00f0ff]">Resume</a>
+        <a href="#contact" class="hover:text-[#00f0ff] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Action CTA Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl text-slate-300 hover:text-[#00f0ff] hover:bg-white/5 border border-white/5 transition-all" title="GitHub Profile">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jayashree-m-b-1a1a55400" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl text-slate-300 hover:text-[#00f0ff] hover:bg-white/5 border border-white/5 transition-all" title="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="Jayashree_MB_Resume.pdf" download="Jayashree_MB_Resume.pdf" onclick="showToast('Downloading Jayashree MB Resume PDF...')" class="px-3.5 py-2 rounded-xl text-xs font-mono font-bold bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/40 hover:bg-[#00f0ff] hover:text-[#080d1a] shadow-sm shadow-[#00f0ff]/10 transition-all flex items-center gap-1.5" title="Download Resume PDF">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i> CV (PDF)
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 border border-white/10" aria-label="Toggle navigation">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-[#080d1a]/95 border-b border-white/10 backdrop-blur-xl">
+      <div class="flex flex-col space-y-3 font-medium text-sm text-slate-300 pt-2">
+        <a href="#about" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">About</a>
+        <a href="#skills" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">Skills</a>
+        <a href="#experience" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">Internships</a>
+        <a href="#projects" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">Projects</a>
+        <a href="#education" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">Education</a>
+        <a href="#resume" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 text-[#00f0ff] font-semibold">Resume / CV</a>
+        <a href="#contact" class="mobile-link py-2 px-3 rounded-lg hover:bg-white/5 hover:text-[#00f0ff]">Contact</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="Jayashree_MB_Resume.pdf" download="Jayashree_MB_Resume.pdf" onclick="showToast('Downloading Jayashree MB Resume PDF...')" class="w-full text-center py-2.5 rounded-xl font-bold text-xs uppercase bg-[#00f0ff] text-[#080d1a] flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Bio & Call to Actions -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <!-- Live Status Badge & Photo Thumbnail -->
+        <div class="flex items-center justify-center lg:justify-start gap-3">
+          <div class="relative">
+            <div class="w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-[#00f0ff] to-[#10b981] shadow-lg shadow-[#00f0ff]/20">
+              <img src="profile.jpg" alt="Jayashree M B" class="w-full h-full object-cover object-top rounded-full" />
+            </div>
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-[#10b981] border-2 border-[#080d1a] rounded-full"></span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/30 shadow-sm shadow-[#00f0ff]/10">
+            <span class="w-2 h-2 rounded-full bg-[#00f0ff] animate-ping"></span>
+            <span>Open to Software Engineering & Full stack developer</span>
+          </div>
+        </div>
+
+        <!-- Name & Headline -->
+        <div class="space-y-2">
+          <p class="text-slate-400 font-mono text-sm tracking-wide">Hello World, I'm</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight text-white leading-tight">
+            Jayashree <span class="text-gradient">M B</span>
+          </h1>
+        </div>
+
+        <!-- Description -->
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Computer Science Engineering student at The Oxford College of Engineering (9.0 CGPA).Aspiring to become a Software Engineer and Full Stack Developer. Skilled in building web applications, developing backend systems, and working with databases using technologies like Python, Java, JavaScript, HTML, CSS, and MySQL. Passionate about creating practical, scalable software solutions and continuously learning new technologies to solve real-world problems.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+          <a href="Jayashree_MB_Resume.pdf" download="Jayashree_MB_Resume.pdf" onclick="showToast('Downloading Jayashree MB Resume PDF...')" class="px-5 py-3 rounded-xl bg-gradient-to-r from-[#00f0ff] to-[#0284c7] text-[#080d1a] font-bold text-sm flex items-center gap-2 shadow-lg shadow-[#00f0ff]/25 hover:shadow-[#00f0ff]/40 hover:scale-[1.02] transition-all">
+            <i data-lucide="download" class="w-4 h-4"></i> Download CV (PDF)
+          </a>
+          <a href="#projects" class="px-5 py-3 rounded-xl glass-card glow-border text-white font-semibold text-sm flex items-center gap-2 hover:bg-white/5 transition-all">
+            <i data-lucide="folder-git-2" class="w-4 h-4 text-[#00f0ff]"></i> View Projects
+          </a>
+          <button onclick="copyToClipboard('j36049840@gmail.com', 'Email')" class="px-4 py-3 rounded-xl glass-card border border-white/10 text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/40 text-sm flex items-center gap-2 transition-all" title="Quick Copy Email">
+            <i data-lucide="copy" class="w-4 h-4"></i> Copy Email
+          </button>
+        </div>
+
+        <!-- Quick Resume Metrics -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+          <div class="bg-white/[0.02] p-3 rounded-xl border border-white/5 text-center lg:text-left">
+            <div class="text-2xl font-bold font-mono text-[#00f0ff]">9.0</div>
+            <div class="text-[11px] font-sans text-slate-400">BE CGPA / 10</div>
+          </div>
+          <div class="bg-white/[0.02] p-3 rounded-xl border border-white/5 text-center lg:text-left">
+            <div class="text-2xl font-bold font-mono text-[#10b981]">93%</div>
+            <div class="text-[11px] font-sans text-slate-400">Pre-University</div>
+          </div>
+          <div class="bg-white/[0.02] p-3 rounded-xl border border-white/5 text-center lg:text-left">
+            <div class="text-2xl font-bold font-mono text-[#38bdf8]">2</div>
+            <div class="text-[11px] font-sans text-slate-400">Internships</div>
+          </div>
+          <div class="bg-white/[0.02] p-3 rounded-xl border border-white/5 text-center lg:text-left">
+            <div class="text-2xl font-bold font-mono text-[#c084fc]">3+</div>
+            <div class="text-[11px] font-sans text-slate-400">Core Projects</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Terminal & Code Card -->
+      <div class="lg:col-span-5 reveal-on-scroll">
+        <div class="terminal-window glow-border animate-float">
+          <div class="terminal-header justify-between">
+            <div class="flex items-center gap-2">
+              <span class="terminal-dot bg-red-500/80"></span>
+              <span class="terminal-dot bg-yellow-500/80"></span>
+              <span class="terminal-dot bg-green-500/80"></span>
+              <span class="text-xs font-mono text-slate-400 ml-2">jayashree_profile.cpp</span>
+            </div>
+            <span class="text-[11px] font-mono text-[#00f0ff]/70">C++20 &bull; Ready</span>
+          </div>
+          <div class="p-5 font-mono text-xs space-y-2 leading-relaxed bg-[#060a14]">
+            <div class="text-slate-500">// Candidate Profile Specifications</div>
+            <div><span class="text-[#c084fc]">#include</span> <span class="text-[#34d399]">&lt;iostream&gt;</span></div>
+            <div><span class="text-[#c084fc]">#include</span> <span class="text-[#34d399]">&lt;portfolio/jayashree.hpp&gt;</span></div>
+            <div class="pt-2"><span class="text-[#60a5fa]">struct</span> <span class="text-[#00f0ff]">SoftwareEngineer</span> {</div>
+            <div class="pl-4 text-slate-300">std::string name = <span class="text-[#34d399]">"Jayashree M B"</span>;</div>
+            <div class="pl-4 text-slate-300">std::string college = <span class="text-[#34d399]">"The Oxford College of Engg"</span>;</div>
+            <div class="pl-4 text-slate-300">float cgpa = <span class="text-amber-400">9.0f</span>;</div>
+            <div class="pl-4 text-slate-300">std::vector&lt;std::string&gt; coreTech = {</div>
+            <div class="pl-8 text-[#00f0ff]">"C++ / DSA", "Python / OpenCV", "Generative AI", "AWS SageMaker"</div>
+            <div class="pl-4 text-slate-300">};</div>
+            <div class="pl-4 text-slate-300">bool openForOpportunities = <span class="text-[#34d399]">true</span>;</div>
+            <div>};</div>
+            <div class="pt-2 text-slate-500">// Ready to build scalable software solutions</div>
+            <div class="flex items-center gap-2 text-[#34d399]">
+              <span class="text-slate-400">&gt;</span> Status: Ready &bull; Resume Linked
+            </div>
+          </div>
+          
+          <!-- Terminal Bottom Quick Info -->
+          <div class="bg-[#0b1222] p-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-slate-400 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#00f0ff]"></i> Bengaluru, India
+            </span>
+            <a href="mailto:j36049840@gmail.com" class="text-[#00f0ff] hover:underline font-mono">j36049840@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. ABOUT SECTION (FEATURING PROFILE PHOTO)
+       ========================================== -->
+  <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Background & Profile</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">About Me</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Passionate about high-performance computing, practical machine learning systems, and computer vision innovation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <!-- Left Column: Portrait Card with Glow Border -->
+      <div class="lg:col-span-5 reveal-on-scroll flex justify-center">
+        <div class="relative glass rounded-2xl p-3 glow-border overflow-hidden group max-w-sm w-full">
+          <!-- Ambient card glow -->
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-[#00f0ff]/20 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+          
+          <div class="relative overflow-hidden rounded-xl bg-[#060a14]">
+            <img src="profile.jpg" alt="Jayashree M B" class="w-full h-[400px] object-cover object-top rounded-xl group-hover:scale-105 transition-transform duration-500 shadow-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#080d1a] via-[#080d1a]/20 to-transparent"></div>
+            
+            <div class="absolute bottom-4 left-4 right-4 space-y-1">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#080d1a]/85 text-[#00f0ff] border border-[#00f0ff]/30 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                Class of 2027 &bull; Oxford College
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white">Jayashree M B</h3>
+              <p class="text-xs font-mono text-slate-300">Computer Science Engineering</p>
+            </div>
+          </div>
+
+          <!-- Bottom Card Buttons -->
+          <div class="pt-3.5 flex gap-2.5">
+            <a href="Jayashree_MB_Resume.pdf" download="Jayashree_MB_Resume.pdf" onclick="showToast('Downloading Jayashree MB Resume PDF...')" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#00f0ff] to-[#0284c7] text-[#080d1a] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md shadow-[#00f0ff]/20 hover:shadow-[#00f0ff]/40 transition-all">
+              <i data-lucide="download" class="w-4 h-4"></i> Download CV
+            </a>
+            <a href="#contact" class="px-4 py-2.5 rounded-xl glass-card text-white hover:text-[#00f0ff] text-xs font-semibold flex items-center justify-center gap-1.5 border border-white/10 transition-all">
+              <i data-lucide="mail" class="w-4 h-4 text-[#00f0ff]"></i> Contact
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Biography & Academic Details -->
+      <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
+        <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/20">
+              <i data-lucide="user-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white font-heading">Computer Science Engineering Student</h3>
+              <p class="text-xs font-mono text-slate-400">Class of 2027 &bull; The Oxford College of Engineering</p>
+            </div>
+          </div>
+          
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I am a Computer Science Engineering student passionate about the synergy between core data structures, algorithms, and real-world AI applications. With a consistent <span class="text-[#00f0ff] font-semibold">9.0/10 CGPA</span>, I take pride in combining rigorous mathematical problem solving with full-stack execution.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            During my project-based internships in AI prompt engineering and C++ Data Structures & Algorithms at InternForte, I engineered smart farming Digital Twins, cloud-based code review engines on AWS SageMaker, and real-time computer vision thread inspection models with OpenCV.
+          </p>
+        </div>
+
+        <!-- Academic Record Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="glass-card p-5 rounded-xl border border-white/10 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#00f0ff] font-semibold">2023 – 2027</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/20">CGPA: 9.0/10</span>
+            </div>
+            <h4 class="text-sm font-bold text-white font-heading">The Oxford College of Engineering</h4>
+            <p class="text-xs text-slate-400">Bachelor of Engineering, Computer Science</p>
+          </div>
+
+          <div class="glass-card p-5 rounded-xl border border-white/10 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#10b981] font-semibold">2021 – 2023</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20">93% Percentage</span>
+            </div>
+            <h4 class="text-sm font-bold text-white font-heading">Sri Chaitanya PU College</h4>
+            <p class="text-xs text-slate-400">1st PUC – 2nd PUC Higher Secondary</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="badge-tech px-2.5 py-1 rounded text-xs font-mono">Algorithms &amp; C++</span>
+          <span class="badge-tech px-2.5 py-1 rounded text-xs font-mono">Computer Vision</span>
+          <span class="badge-tech px-2.5 py-1 rounded text-xs font-mono">AWS SageMaker</span>
+          <span class="badge-tech px-2.5 py-1 rounded text-xs font-mono">Generative AI</span>
+          <span class="badge-tech px-2.5 py-1 rounded text-xs font-mono">IoT Systems</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. INTERNSHIPS / EXPERIENCE SECTION
+       ========================================== -->
+  <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Industry Exposure</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Technical Internships</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Hands-on 10-week project-based engineering internships at InternForte focusing on cutting-edge AI and core algorithms.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Internship 1: AI with ChatGPT -->
+      <div class="glass-card p-7 rounded-2xl relative overflow-hidden group reveal-on-scroll">
+        <div class="absolute top-0 right-0 w-28 h-28 bg-[#00f0ff]/10 rounded-full blur-2xl group-hover:bg-[#00f0ff]/20 transition-all"></div>
+        <div class="flex items-start justify-between mb-4">
+          <div class="space-y-1">
+            <span class="text-xs font-mono font-semibold text-[#00f0ff] uppercase tracking-wider">Aug 2025 – Jan 2026</span>
+            <h3 class="text-xl font-bold text-white font-heading">Artificial Intelligence with ChatGPT Intern</h3>
+            <p class="text-sm font-semibold text-slate-300">InternForte</p>
+          </div>
+          <div class="p-3 rounded-xl bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/20">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#00f0ff] flex-shrink-0 mt-0.5"></i>
+            <span>Completed an intensive 10-week project-based internship in Artificial Intelligence with ChatGPT.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#00f0ff] flex-shrink-0 mt-0.5"></i>
+            <span>Engineered AI-based workflows and autonomous solutions utilizing advanced prompt engineering frameworks and generative AI principles.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#00f0ff] flex-shrink-0 mt-0.5"></i>
+            <span>Evaluated model hallucination mitigation, token optimization, and context structuring for automated domain reasoning.</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10">
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Generative AI</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Prompt Engineering</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">LLM Workflows</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Python</span>
+        </div>
+      </div>
+
+      <!-- Internship 2: DSA in C++ -->
+      <div class="glass-card p-7 rounded-2xl relative overflow-hidden group reveal-on-scroll">
+        <div class="absolute top-0 right-0 w-28 h-28 bg-[#10b981]/10 rounded-full blur-2xl group-hover:bg-[#10b981]/20 transition-all"></div>
+        <div class="flex items-start justify-between mb-4">
+          <div class="space-y-1">
+            <span class="text-xs font-mono font-semibold text-[#10b981] uppercase tracking-wider">Feb 2026 – Aug 2026</span>
+            <h3 class="text-xl font-bold text-white font-heading">Data Structure and Algorithm Intern</h3>
+            <p class="text-sm font-semibold text-slate-300">InternForte</p>
+          </div>
+          <div class="p-3 rounded-xl bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20">
+            <i data-lucide="binary" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#10b981] flex-shrink-0 mt-0.5"></i>
+            <span>Completed an intensive 10-week project-based internship mastering Data Structures & Algorithms in modern C++.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#10b981] flex-shrink-0 mt-0.5"></i>
+            <span>Built deep practical comprehension across arrays, linked lists, stacks, queues, trees, graphs, hashing, and dynamic programming.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i data-lucide="check" class="w-4 h-4 text-[#10b981] flex-shrink-0 mt-0.5"></i>
+            <span>Optimized time complexity (\(O(N)\), \(O(\log N)\)) and memory allocations for high-performance computing scenarios.</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10">
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">C++</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Data Structures</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Dynamic Programming</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Graph Theory</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. PROJECTS SECTION
+       ========================================== -->
+  <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Engineering Portfolio</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Featured Projects</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Production-grade engineering implementations spanning IoT Digital Twins, AWS SageMaker cloud intelligence, and OpenCV computer vision.
+      </p>
+    </div>
+
+    <!-- Category Filter Controls -->
+    <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12 reveal-on-scroll">
+      <button onclick="filterProjects('all')" data-category="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-mono font-semibold uppercase tracking-wider glass-card transition-all">
+        All Projects
+      </button>
+      <button onclick="filterProjects('ai-ml')" data-category="ai-ml" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold uppercase tracking-wider glass-card text-slate-400 hover:text-white transition-all">
+        AI &amp; Machine Learning
+      </button>
+      <button onclick="filterProjects('vision-iot')" data-category="vision-iot" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold uppercase tracking-wider glass-card text-slate-400 hover:text-white transition-all">
+        IoT &amp; Computer Vision
+      </button>
+      <button onclick="filterProjects('cloud')" data-category="cloud" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold uppercase tracking-wider glass-card text-slate-400 hover:text-white transition-all">
+        Cloud ML &amp; Tools
+      </button>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Project 1: Smart Farming Digital Twin -->
+      <div data-category="ai-ml vision-iot" class="project-card glass-card rounded-2xl flex flex-col justify-between overflow-hidden p-6 reveal-on-scroll">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-[#10b981]/15 text-[#10b981] border border-[#10b981]/30">
+              <i data-lucide="activity" class="w-3 h-3"></i> IoT &amp; AI Digital Twin
+            </span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-lg text-slate-400 hover:text-[#00f0ff] hover:bg-white/5 transition-colors" title="Source Code">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold font-heading text-white group-hover:text-[#00f0ff] transition-colors">
+            AI-Augmented Smart Farming System using Digital Twin and AI
+          </h3>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Developed an intelligent IoT-based smart farming system for real-time crop monitoring, groundnut disease prediction, and data-driven irrigation management using AI, Digital Twin technology, and blockchain for secure and transparent agricultural data.
+          </p>
+
+          <div class="space-y-2 pt-2">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-[#00f0ff] font-semibold">Technologies:</div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">IoT</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Machine Learning</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Digital Twin</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Blockchain</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">ESP32</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+          <button onclick="openProjectModal('farming')" class="text-xs font-mono font-semibold text-[#00f0ff] hover:underline flex items-center gap-1.5">
+            <i data-lucide="info" class="w-3.5 h-3.5"></i> Architecture Deep Dive
+          </button>
+          <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1">
+            Repo <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: AI Code Reviewer using SageMaker -->
+      <div data-category="ai-ml cloud" class="project-card glass-card rounded-2xl flex flex-col justify-between overflow-hidden p-6 reveal-on-scroll">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-[#00f0ff]/15 text-[#00f0ff] border border-[#00f0ff]/30">
+              <i data-lucide="cloud" class="w-3 h-3"></i> Cloud ML &amp; DevOps
+            </span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-lg text-slate-400 hover:text-[#00f0ff] hover:bg-white/5 transition-colors" title="Source Code">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold font-heading text-white group-hover:text-[#00f0ff] transition-colors">
+            AI Code Reviewer using SageMaker
+          </h3>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Built a cloud-based AI code review system capable of analyzing Python source code, detecting syntax errors, identifying code quality issues, and providing intelligent optimization suggestions in real time.
+          </p>
+
+          <div class="space-y-2 pt-2">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-[#00f0ff] font-semibold">Technologies:</div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">AWS SageMaker</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Amazon S3</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Streamlit</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+          <button onclick="openProjectModal('reviewer')" class="text-xs font-mono font-semibold text-[#00f0ff] hover:underline flex items-center gap-1.5">
+            <i data-lucide="info" class="w-3.5 h-3.5"></i> Architecture Deep Dive
+          </button>
+          <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1">
+            Repo <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Fabric Thread Matching System -->
+      <div data-category="vision-iot" class="project-card glass-card rounded-2xl flex flex-col justify-between overflow-hidden p-6 reveal-on-scroll">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-[#a855f7]/15 text-[#c084fc] border border-[#c084fc]/30">
+              <i data-lucide="scan" class="w-3 h-3"></i> Computer Vision
+            </span>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-lg text-slate-400 hover:text-[#00f0ff] hover:bg-white/5 transition-colors" title="Source Code">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold font-heading text-white group-hover:text-[#00f0ff] transition-colors">
+            Fabric Thread Matching System
+          </h3>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Built an OpenCV-based image-processing system to identify and match fabric threads using computer vision techniques, measuring yarn density and structural texture alignment.
+          </p>
+
+          <div class="space-y-2 pt-2">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-[#00f0ff] font-semibold">Technologies:</div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">OpenCV</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">JavaScript</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/10 text-slate-300">Image Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+          <button onclick="openProjectModal('fabric')" class="text-xs font-mono font-semibold text-[#00f0ff] hover:underline flex items-center gap-1.5">
+            <i data-lucide="info" class="w-3.5 h-3.5"></i> Architecture Deep Dive
+          </button>
+          <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1">
+            Repo <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. TECHNICAL SKILLS SECTION
+       ========================================== -->
+  <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Technical Arsenal</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Skills &amp; Technologies</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Comprehensive breakdown of programming languages, web stacks, frameworks, and developer toolchains.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1: Languages -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/20">
+            <i data-lucide="code-2" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Programming Languages</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Python</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Java</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">C++</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">C</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Web & Databases -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Web &amp; Databases</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">HTML5</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">CSS3</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">JavaScript</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">PHP</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">MySQL</span>
+        </div>
+      </div>
+
+      <!-- Card 3: AI & Computer Vision -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-[#a855f7]/10 text-[#c084fc] border border-[#c084fc]/20">
+            <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">AI, ML &amp; Computer Vision</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">OpenCV</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Machine Learning</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Prompt Engineering</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Generative AI</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Digital Twin</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Core Computer Science -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/20">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Core CS Fundamentals</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Data Structures &amp; Algorithms</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">OOP</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">DBMS</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Operating Systems</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Computer Networks</span>
+        </div>
+      </div>
+
+      <!-- Card 5: Cloud & Platforms -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <i data-lucide="cloud-lightning" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Cloud &amp; IoT Hardware</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">AWS SageMaker</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Amazon S3</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Streamlit</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">ESP32 &amp; IoT</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Arduino</span>
+        </div>
+      </div>
+
+      <!-- Card 6: Developer Tools -->
+      <div class="glass-card p-6 rounded-2xl space-y-4 reveal-on-scroll">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-pink-500/10 text-pink-400 border border-pink-500/20">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white font-heading">Developer Tools</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Git</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">GitHub</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">VS Code</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Jupyter Notebook</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">Eclipse</span>
+          <span class="badge-tech px-3 py-1.5 rounded-lg text-xs font-mono font-semibold">XAMPP</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. EDUCATION & ACHIEVEMENTS SECTION
+       ========================================== -->
+  <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Milestones</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Education &amp; Achievements</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Academic pedigree, competitive hackathon involvement, and certified technical workshops.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Education Column -->
+      <div class="space-y-6 reveal-on-scroll">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="p-2 rounded-xl bg-[#00f0ff]/10 text-[#00f0ff]">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-white">Academic Qualifications</h3>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/30">
+              CGPA: 9.0 / 10
+            </span>
+            <span class="text-xs font-mono text-slate-400">2023 – 2027</span>
+          </div>
+          <h4 class="text-lg font-bold text-white font-heading">The Oxford College of Engineering</h4>
+          <p class="text-sm text-slate-300">Bachelor of Engineering, Computer Science</p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Consistently leading in academic standing with a 9.0 cumulative grade point average, actively participating in tech clubs, workshops, and coding challenges.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/30">
+              Percentage: 93%
+            </span>
+            <span class="text-xs font-mono text-slate-400">2021 – 2023</span>
+          </div>
+          <h4 class="text-lg font-bold text-white font-heading">Sri Chaitanya PU College</h4>
+          <p class="text-sm text-slate-300">1st PUC – 2nd PUC Higher Secondary</p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Graduated with distinction scoring 93% in pre-university science track, building a strong core foundation in Mathematics and Physics.
+          </p>
+        </div>
+      </div>
+
+      <!-- Achievements & Workshops Column -->
+      <div class="space-y-6 reveal-on-scroll">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="p-2 rounded-xl bg-[#10b981]/10 text-[#10b981]">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-bold font-heading text-white">Achievements &amp; Workshops</h3>
+        </div>
+
+        <!-- Hackathon -->
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0">
+            <i data-lucide="trophy" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-base font-bold text-white font-heading">Participated in OxyHack Hackathon</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Collaborated in a time-constrained hackathon setting to design and deliver innovative software prototypes addressing real-world problem statements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Workshops List -->
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <h4 class="text-xs font-mono uppercase tracking-widest text-[#00f0ff] font-bold">Specialized Technical Workshops Attended</h4>
+          <div class="space-y-2.5 pt-1">
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 bg-white/[0.02] p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-[#00f0ff] flex-shrink-0"></i>
+              <span>Machine Learning Workshop</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 bg-white/[0.02] p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-[#00f0ff] flex-shrink-0"></i>
+              <span>Cloud Computing Workshop</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 bg-white/[0.02] p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-[#00f0ff] flex-shrink-0"></i>
+              <span>IoT (Arduino) Hardware Prototyping Workshop</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 bg-white/[0.02] p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-[#00f0ff] flex-shrink-0"></i>
+              <span>Snapchat Lens Studio AR Development Workshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. DEDICATED RESUME & CV DOWNLOAD SECTION
+       ========================================== -->
+  <section id="resume" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Curriculum Vitae</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Download Resume</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Access my verified, ATS-friendly technical resume detailing academic background, internship deliverables, and engineering projects.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+      
+      <!-- Resume Visual / Overview Card -->
+      <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl glow-border reveal-on-scroll space-y-5">
+        <div class="flex items-center justify-between pb-4 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20">
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white font-heading">Jayashree_MB_Resume.pdf</h3>
+              <p class="text-xs font-mono text-slate-400">PDF Document &bull; 92 KB &bull; Verified ATS Format</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-[#10b981]/15 text-[#10b981] border border-[#10b981]/30">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span> Updated 2026
+          </span>
+        </div>
+
+        <!-- Resume Executive Highlights inside card -->
+        <div class="space-y-3 font-mono text-xs text-slate-300">
+          <div class="p-4 rounded-xl bg-[#060a14] border border-white/5 space-y-2.5">
+            <div class="text-[#00f0ff] font-bold uppercase tracking-wider text-[11px]">Key Highlights Snapshot:</div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#00f0ff]">&bull;</span>
+              <span><strong>Education:</strong> B.E. Computer Science, Oxford College of Engg (<span class="text-amber-400 font-bold">9.0/10 CGPA</span>)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#10b981]">&bull;</span>
+              <span><strong>Pre-University:</strong> Sri Chaitanya PU College (<span class="text-emerald-400 font-bold">93% Percentage</span>)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#38bdf8]">&bull;</span>
+              <span><strong>Internships:</strong> AI with ChatGPT Intern &amp; C++ DSA Intern @ InternForte</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#c084fc]">&bull;</span>
+              <span><strong>Core Projects:</strong> Smart Farming IoT Digital Twin, SageMaker AI Code Reviewer, Fabric Thread Matching</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-slate-400">&bull;</span>
+              <span><strong>Technical Stack:</strong> Python, Java, C++, OpenCV, AWS SageMaker, MySQL, JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download & View Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="Jayashree_MB_Resume.pdf" download="Jayashree_MB_Resume.pdf" onclick="showToast('Downloading Jayashree MB Resume PDF...')" class="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#00f0ff] to-[#0284c7] text-[#080d1a] font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#00f0ff]/25 hover:shadow-[#00f0ff]/40 hover:scale-[1.01] transition-all">
+            <i data-lucide="download" class="w-4 h-4"></i> Download PDF Resume
+          </a>
+          <a href="Jayashree_MB_Resume.pdf" target="_blank" class="py-3.5 px-6 rounded-xl glass-card text-white hover:text-[#00f0ff] hover:bg-white/5 border border-white/10 text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="external-link" class="w-4 h-4 text-[#00f0ff]"></i> Preview in Browser
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Recruiter Quick Info & Direct Contact -->
+      <div class="lg:col-span-5 space-y-4 reveal-on-scroll">
+        <div class="glass-card p-6 sm:p-7 rounded-2xl space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 rounded-xl overflow-hidden border-2 border-[#00f0ff]/50 shadow-md shadow-[#00f0ff]/20 flex-shrink-0">
+              <img src="profile.jpg" alt="Jayashree M B" class="w-full h-full object-cover object-top" />
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-white font-heading">Recruiter Quick Connect</h4>
+              <p class="text-xs font-mono text-[#00f0ff]">Ready for Immediate Hiring</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Interested in discussing internship or full-time software engineering roles? Feel free to download my resume or contact me directly via email or phone.
+          </p>
+
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs">
+              <span class="text-slate-400 font-mono">Direct Email</span>
+              <button onclick="copyToClipboard('j36049840@gmail.com', 'Email')" class="text-[#00f0ff] hover:underline font-mono flex items-center gap-1">
+                j36049840@gmail.com <i data-lucide="copy" class="w-3 h-3"></i>
+              </button>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs">
+              <span class="text-slate-400 font-mono">Phone</span>
+              <button onclick="copyToClipboard('+919916530335', 'Phone')" class="text-[#10b981] hover:underline font-mono flex items-center gap-1">
+                +91 9916530335 <i data-lucide="copy" class="w-3 h-3"></i>
+              </button>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs">
+              <span class="text-slate-400 font-mono">Location</span>
+              <span class="text-slate-200">Bengaluru, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. CONTACT SECTION
+       ========================================== -->
+  <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-on-scroll">
+      <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#00f0ff]">Let's Connect</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Get in Touch</h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        I am currently seeking software engineering opportunities, internships, and research collaborations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Direct Contact Cards -->
+      <div class="lg:col-span-5 space-y-4 reveal-on-scroll">
+        
+        <!-- Email Card -->
+        <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="p-3 rounded-xl bg-[#00f0ff]/10 text-[#00f0ff] border border-[#00f0ff]/20">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-slate-400">Email Address</div>
+              <a href="mailto:j36049840@gmail.com" class="text-sm font-semibold text-white hover:text-[#00f0ff] transition-colors">
+                j36049840@gmail.com
+              </a>
+            </div>
+          </div>
+          <button onclick="copyToClipboard('j36049840@gmail.com', 'Email')" class="p-2.5 rounded-xl bg-white/5 hover:bg-[#00f0ff]/10 hover:text-[#00f0ff] text-slate-400 transition-colors" title="Copy Email">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="p-3 rounded-xl bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-slate-400">Phone Number</div>
+              <a href="tel:+919916530335" class="text-sm font-semibold text-white hover:text-[#10b981] transition-colors">
+                +91 9916530335
+              </a>
+            </div>
+          </div>
+          <button onclick="copyToClipboard('+919916530335', 'Phone')" class="p-2.5 rounded-xl bg-white/5 hover:bg-[#10b981]/10 hover:text-[#10b981] text-slate-400 transition-colors" title="Copy Phone">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Location Card -->
+        <div class="glass-card p-5 rounded-2xl flex items-center gap-3.5">
+          <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-xs font-mono text-slate-400">Location</div>
+            <div class="text-sm font-semibold text-white">Bengaluru, Karnataka, India</div>
+          </div>
+        </div>
+
+        <!-- Social Handles -->
+        <div class="glass-card p-5 rounded-2xl flex items-center justify-around">
+          <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-mono text-slate-300 hover:text-[#00f0ff] transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i> GitHub
+          </a>
+          <span class="text-slate-700">&bull;</span>
+          <a href="https://www.linkedin.com/in/jayashree-m-b-1a1a55400" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-mono text-slate-300 hover:text-[#00f0ff] transition-colors">
+            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Contact Message Form -->
+      <div class="lg:col-span-7 reveal-on-scroll">
+        <form onsubmit="handleContactSubmit(event)" class="glass-card p-7 sm:p-8 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white font-heading mb-1">Send a Message</h3>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1.5">
+              <label for="sender-name" class="text-xs font-mono text-slate-400">Your Name</label>
+              <input type="text" id="sender-name" required placeholder="e.g. Alex Smith" class="w-full px-4 py-3 rounded-xl bg-[#060a14] border border-white/10 text-white text-sm focus:outline-none focus:border-[#00f0ff] transition-colors" />
+            </div>
+            <div class="space-y-1.5">
+              <label for="sender-email" class="text-xs font-mono text-slate-400">Your Email</label>
+              <input type="email" id="sender-email" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-[#060a14] border border-white/10 text-white text-sm focus:outline-none focus:border-[#00f0ff] transition-colors" />
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <label for="sender-subject" class="text-xs font-mono text-slate-400">Subject</label>
+            <input type="text" id="sender-subject" required placeholder="Job Opportunity / Engineering Inquiry" class="w-full px-4 py-3 rounded-xl bg-[#060a14] border border-white/10 text-white text-sm focus:outline-none focus:border-[#00f0ff] transition-colors" />
+          </div>
+
+          <div class="space-y-1.5">
+            <label for="sender-message" class="text-xs font-mono text-slate-400">Message</label>
+            <textarea id="sender-message" rows="4" required placeholder="Hi Jayashree, I reviewed your portfolio and would like to discuss..." class="w-full px-4 py-3 rounded-xl bg-[#060a14] border border-white/10 text-white text-sm focus:outline-none focus:border-[#00f0ff] transition-colors"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00f0ff] to-[#0284c7] text-[#080d1a] font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] transition-all">
+            <i data-lucide="send" class="w-4 h-4"></i> Dispatch Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. FOOTER
+       ========================================== -->
+  <footer class="py-12 border-t border-white/5 bg-[#050811] text-slate-400 text-xs text-center relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <span class="font-heading font-bold text-slate-200 text-sm">Jayashree M B</span>
+        <span>&bull;</span>
+        <span class="text-slate-400 font-mono">B.E. Computer Science (9.0 CGPA)</span>
+      </div>
+      <p class="text-slate-500">
+        Designed &amp; built with modern cyber aesthetic inspired by high-impact tech portfolios.
+      </p>
+      <div class="flex items-center justify-center gap-6 pt-2 font-mono text-[11px]">
+        <a href="#hero" class="hover:text-[#00f0ff] transition-colors">Back to Top &uarr;</a>
+        <a href="#resume" class="hover:text-[#00f0ff] transition-colors">Resume</a>
+        <a href="https://github.com/jayashreejbharathi-boop" target="_blank" rel="noopener noreferrer" class="hover:text-[#00f0ff] transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/jayashree-m-b-1a1a55400" target="_blank" rel="noopener noreferrer" class="hover:text-[#00f0ff] transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       11. PROJECT ARCHITECTURE MODAL
+       ========================================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-card bg-[#0d1527] border border-[#00f0ff]/30 rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <div id="modal-content">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
